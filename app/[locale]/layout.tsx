@@ -1,14 +1,22 @@
 import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'Privora10',
   description: 'Secure Multi-User Encrypted File Transfer Web Application',
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return children
+  const messages = await getMessages()
+
+  return (
+    <NextIntlClientProvider messages={messages}>
+      {children}
+    </NextIntlClientProvider>
+  )
 }
