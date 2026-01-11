@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "help": "帮助",
+    "login": "登录",
+    "signup": "注册"
+  },
+  "home": {
+    "title": "欢迎来到 Privora10",
+    "subtitle": "安全的多用户加密文件传输",
+    "description": "与多个用户同时安全共享文件。"
+  },
+  "about": {
+    "title": "关于 Privora10",
+    "description": "Privora10 是一款专为多个用户设计的加密文件传输应用。"
+  },
+  "help": {
+    "title": "帮助与支持",
+    "description": "获取使用 Privora10 的帮助。"
+  }
+}

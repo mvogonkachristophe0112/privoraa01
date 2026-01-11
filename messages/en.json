@@ -1,0 +1,52 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "help": "Help",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "home": {
+    "title": "Welcome to Privora10",
+    "subtitle": "Secure Multi-User Encrypted File Transfer",
+    "description": "Share files securely with multiple users simultaneously."
+  },
+  "about": {
+    "title": "About Privora10",
+    "description": "Privora10 is a secure file transfer application designed for multiple users."
+  },
+  "help": {
+    "title": "Help & Support",
+    "description": "Get help with using Privora10."
+  },
+  "auth": {
+    "signup": {
+      "title": "Create Account",
+      "subtitle": "Join Privora10 for secure file sharing",
+      "name": "Full Name",
+      "email": "Email Address",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "signupButton": "Sign Up",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Log in"
+    },
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your Privora10 account",
+      "email": "Email Address",
+      "password": "Password",
+      "loginButton": "Log In",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "signupLink": "Sign up"
+    },
+    "forgotPassword": {
+      "title": "Reset Password",
+      "subtitle": "Enter your email to receive reset instructions",
+      "email": "Email Address",
+      "resetButton": "Send Reset Link",
+      "backToLogin": "Back to login"
+    }
+  }
+}

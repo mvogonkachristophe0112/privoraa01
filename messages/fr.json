@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "help": "Aide",
+    "login": "Connexion",
+    "signup": "S'inscrire"
+  },
+  "home": {
+    "title": "Bienvenue sur Privora10",
+    "subtitle": "Transfert de fichiers chiffrés multi-utilisateurs sécurisé",
+    "description": "Partagez des fichiers en toute sécurité avec plusieurs utilisateurs simultanément."
+  },
+  "about": {
+    "title": "À propos de Privora10",
+    "description": "Privora10 est une application de transfert de fichiers sécurisée conçue pour plusieurs utilisateurs."
+  },
+  "help": {
+    "title": "Aide et support",
+    "description": "Obtenez de l'aide pour utiliser Privora10."
+  }
+}
