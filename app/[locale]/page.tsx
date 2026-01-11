@@ -1,14 +1,12 @@
-'use client'
-
 import Link from 'next/link'
-import { useLocale } from 'next-intl'
-import Navbar from '@/components/Navbar'
 
-export default function Home() {
-  const locale = useLocale()
+export default function Home({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
   return (
     <div className="min-h-screen bg-background-soft">
-      <Navbar />
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-blue-green text-white">
@@ -25,13 +23,13 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href={`/${locale}/signup`}
+                  href="/signup"
                   className="bg-white text-primary-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Sign Up
                 </Link>
                 <Link
-                  href={`/${locale}/login`}
+                  href="/login"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors"
                 >
                   Log In

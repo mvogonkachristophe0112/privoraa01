@@ -1,12 +1,11 @@
-'use client'
-
 import Link from 'next/link'
-import { useTranslations, useLocale } from 'next-intl'
 import Navbar from '@/components/Navbar'
 
-export default function Login() {
-  const t = useTranslations('auth.login')
-  const locale = useLocale()
+export default function Login({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
 
   return (
     <div className="min-h-screen bg-background-soft">
@@ -15,17 +14,17 @@ export default function Login() {
         <div className="bg-white rounded-lg shadow-sm p-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              {t('title')}
+              Welcome Back
             </h1>
             <p className="text-gray-600">
-              {t('subtitle')}
+              Sign in to your Privora10 account
             </p>
           </div>
 
           <form className="space-y-6">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                {t('email')}
+                Email Address
               </label>
               <input
                 type="email"
@@ -39,7 +38,7 @@ export default function Login() {
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-                {t('password')}
+                Password
               </label>
               <input
                 type="password"
@@ -54,7 +53,7 @@ export default function Login() {
             <div className="flex items-center justify-between">
               <div className="text-sm">
                 <Link href={`/${locale}/forgot-password`} className="text-primary-blue hover:text-primary-blue-light">
-                  {t('forgotPassword')}
+                  Forgot password?
                 </Link>
               </div>
             </div>
@@ -63,15 +62,15 @@ export default function Login() {
               type="submit"
               className="w-full bg-primary-blue text-white py-3 px-4 rounded-md font-semibold hover:bg-primary-blue-light focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 transition-colors"
             >
-              {t('loginButton')}
+              Log In
             </button>
           </form>
 
           <div className="mt-6 text-center">
             <p className="text-gray-600">
-              {t('noAccount')}{' '}
+              Don't have an account?{' '}
               <Link href={`/${locale}/signup`} className="text-primary-blue hover:text-primary-blue-light font-medium">
-                {t('signupLink')}
+                Sign up
               </Link>
             </p>
           </div>

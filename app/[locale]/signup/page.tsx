@@ -1,12 +1,11 @@
-'use client'
-
 import Link from 'next/link'
-import { useTranslations, useLocale } from 'next-intl'
 import Navbar from '@/components/Navbar'
 
-export default function SignUp() {
-  const t = useTranslations('auth.signup')
-  const locale = useLocale()
+export default function SignUp({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
 
   return (
     <div className="min-h-screen bg-background-soft">
@@ -15,17 +14,17 @@ export default function SignUp() {
         <div className="bg-white rounded-lg shadow-sm p-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              {t('title')}
+              Create Account
             </h1>
             <p className="text-gray-600">
-              {t('subtitle')}
+              Join Privora10 for secure file sharing
             </p>
           </div>
 
           <form className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                {t('name')}
+                Full Name
               </label>
               <input
                 type="text"
@@ -39,7 +38,7 @@ export default function SignUp() {
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                {t('email')}
+                Email Address
               </label>
               <input
                 type="email"
@@ -53,7 +52,7 @@ export default function SignUp() {
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-                {t('password')}
+                Password
               </label>
               <input
                 type="password"
@@ -67,7 +66,7 @@ export default function SignUp() {
 
             <div>
               <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-1">
-                {t('confirmPassword')}
+                Confirm Password
               </label>
               <input
                 type="password"
@@ -83,15 +82,15 @@ export default function SignUp() {
               type="submit"
               className="w-full bg-primary-blue text-white py-3 px-4 rounded-md font-semibold hover:bg-primary-blue-light focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 transition-colors"
             >
-              {t('signupButton')}
+              Sign Up
             </button>
           </form>
 
           <div className="mt-6 text-center">
             <p className="text-gray-600">
-              {t('haveAccount')}{' '}
+              Already have an account?{' '}
               <Link href={`/${locale}/login`} className="text-primary-blue hover:text-primary-blue-light font-medium">
-                {t('loginLink')}
+                Log in
               </Link>
             </p>
           </div>
